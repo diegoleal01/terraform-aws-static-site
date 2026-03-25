@@ -1,0 +1,89 @@
+# ============================================
+# Terraform State Files (NEVER COMMIT)
+# ============================================
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+.terraform.tfstate.lock.info
+
+# ============================================
+# Terraform Directories
+# ============================================
+.terraform/
+.terraform*
+
+# ============================================
+# Terraform Lock File
+# ============================================
+# DECISION: Uncommenting this ignores lock file
+# RECOMMENDED: Commit .terraform.lock.hcl for consistency
+.terraform.lock.hcl
+
+# ============================================
+# Variable Files (may contain secrets)
+# ============================================
+terraform.tfvars
+*.tfvars
+*.tfvars.json
+
+# Exception: Commit example files
+!terraform.tfvars.example
+!*.tfvars.example
+
+# ============================================
+# Override Files (local config)
+# ============================================
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Exception: Specific overrides to keep
+# !example_override.tf
+
+# ============================================
+# Crash and Log Files
+# ============================================
+crash.log
+crash.*.log
+
+# ============================================
+# CLI Configuration
+# ============================================
+.terraformrc
+terraform.rc
+
+# ============================================
+# Plan Files (optional)
+# ============================================
+# Uncomment to ignore plan output files
+# *tfplan*
+# planout
+
+# ============================================
+# Graph Output (optional)
+# ============================================
+# *.dot
+
+# ============================================
+# Backup Files
+# ============================================
+*.backup
+*.bak
+
+# ============================================
+# OS Files
+# ============================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ============================================
+# IDE and Editor Files
+# ============================================
+.vscode/
+.idea/
+*.iml
+.vs/
