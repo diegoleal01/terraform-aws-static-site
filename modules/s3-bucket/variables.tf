@@ -4,11 +4,6 @@ variable "tags" {
   description = "A map of tags to apply to AWS resources"
 }
 
-variable "project_name" {
-  type        = string
-  description = "Name of the project used to prefix resource names"
-}
-
 # S3 variables
 variable "bucket_name" {
   type        = string
