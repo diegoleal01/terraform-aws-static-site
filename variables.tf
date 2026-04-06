@@ -1,23 +1,24 @@
 # Global variables
 variable "aws_region" {
+  description = "AWS region where resources will be provisioned"
   type        = string
   default     = "us-east-1"
-  description = "AWS region where resources will be provisioned"
-}
-
-variable "cli_profile" {
-  type        = string
-  description = "AWS CLI profile to use for authentication"
 }
 
 # S3 variables
 variable "bucket_name" {
-  type        = string
   description = "Globally unique name for the S3 bucket that will host the static website"
+  type        = string
 }
 
-# ACM variables
+# ACM / CloudFront variables
 variable "domain_name" {
-  type = string
-  description = "The primary domain name for the ACM certificate"
+  description = "The primary domain name for the ACM certificate and CloudFront distribution"
+  type        = string
+}
+
+variable "enable_custom_domain" {
+  description = "Whether to attach the custom domain and ACM certificate to the CloudFront distribution. Set to false while DNS validation is pending at the external DNS provider."
+  type        = bool
+  default     = false
 }

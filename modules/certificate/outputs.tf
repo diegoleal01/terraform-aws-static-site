@@ -1,9 +1,9 @@
 output "certificate_arn" {
-  value = aws_acm_certificate.cert.arn
-  description = "ARN of the certificate generated"
+  description = "ARN of the ACM certificate generated"
+  value       = aws_acm_certificate.cert.arn
 }
 
 output "validation_records" {
-  value = aws_acm_certificate.cert.domain_validation_options
-  description = "CNAME records to add in DNS service"
+  description = "CNAME records to add to the DNS provider to complete domain validation"
+  value       = aws_acm_certificate.cert.domain_validation_options
 }

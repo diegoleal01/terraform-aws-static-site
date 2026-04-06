@@ -1,21 +1,20 @@
 provider "aws" {
-  region  = var.aws_region
-  profile = var.cli_profile
+  region = var.aws_region
 }
 
 terraform {
+  required_version = ">= 1.5"
 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "~> 6.0"
     }
   }
 
   backend "s3" {
-    bucket  = ""
-    key     = ""
-    region  = ""
-    profile = ""
+    bucket = ""
+    key    = ""
+    region = ""
   }
 }

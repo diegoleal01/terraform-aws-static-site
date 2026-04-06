@@ -1,8 +1,7 @@
 locals {
   tags = {
-    Department   = "DevOps"
-    Organization = "Infrastructure and Operations"
-    Environment  = "Dev"
-    ManagedBy    = "Terraform"
+    Department  = "DevOps"
+    Environment = "Dev"
+    ManagedBy   = "Terraform"
   }
 }
